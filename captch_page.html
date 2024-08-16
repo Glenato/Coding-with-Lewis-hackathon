@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Good luck</title>
+</head>
+
+<style>
+    body{
+    background-color: rgb(229, 229, 229);
+    }
+    .grid-parent {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: rgb(52, 116, 225);
+    padding-right: 20px;
+    margin: auto;
+    width: 50%;
+    border-radius: 15px;
+    }
+    .grid-item {
+    width: 100%;
+    padding-top: 100%; 
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    }
+    .grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    }
+    .question-box{
+    border: 5px solid;
+    border-color: rgb(37, 115, 171);
+    background-color: aliceblue;
+    border-radius: 100px;
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+    }
+    .grid-button{
+    position: relative;
+    transform: translate(0%, -99.5%);
+    right: -5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding-right: 20px;
+    margin: auto;
+    width: 50%;
+    border-radius: 15px;
+    background-color: transparent;
+    
+    }
+    .captcha-button{
+    width: 100%;
+    padding-top: 100%; 
+    position: relative;
+    overflow: hidden;
+    margin: 7px;
+    background-color: transparent;
+    border-radius: 10px;
+    object-fit: cover; 
+    border-color: transparent;
+
+    }
+    .captcha-image{
+    max-height: 200px;
+    width: 100%;
+    position: relative;
+    height: -100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin: 7px;
+    border-radius: 10px;
+    object-fit: contain;
+
+    }
+</style>
+
+<body>
+    <div class="question-box" id="captcha-question"></div>
+    <div class="grid-parent" id="imageGrid"></div>
+    <div class="grid-button" id="buttonGrid">
+        <button class="captcha-button" id="b1" onclick="get_button_press(1)"></button>
+        <button class="captcha-button" id="b2" onclick="get_button_press(2)"></button>
+        <button class="captcha-button" id="b3" onclick="get_button_press(3)"></button>
+        <button class="captcha-button" id="b4" onclick="get_button_press(4)"></button>
+        <button class="captcha-button" id="b5" onclick="get_button_press(5)"></button>
+        <button class="captcha-button" id="b6" onclick="get_button_press(6)"></button>
+        <button class="captcha-button" id="b7" onclick="get_button_press(7)"></button>
+        <button class="captcha-button" id="b8" onclick="get_button_press(8)"></button>
+        <button class="captcha-button" id="b9" onclick="get_button_press(9)"></button>
+    </div>
+    
+</body>
+
+<script src="captcha.js"></script>
+
+</html>

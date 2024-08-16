@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+</head>
+<style>
+    .loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid rgb(52, 116, 225);;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    } 
+
+    .loader-div{
+        align-items: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        text-align : center
+    }
+    .loader-text{
+        font-family:Sans-Serif;
+        position: absolute;
+        margin-top: 40px;
+        font-size: larger;
+    }
+</style>
+<body>
+    <div class="loader-div">
+        <span class="loader"></span>
+        <p class="loader-text">Loading...</p>
+    </div>
+</body>
+<script>
+    function check(){
+    if (localStorage.getItem("state") == "final"){
+        localStorage.setItem("state", "new");
+        redirect("./final_captcha.html");
+    }
+    else{
+        redirect("./index.html");
+    }
+    }
+
+    function redirect(path) {
+        setTimeout(() => {
+            console.log("Waiting");window.location.href = path}, 2000);
+    }
+    window.onload = check();
+</script>
+</html>
