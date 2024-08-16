@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple captcha</title>
+
+    <script>
+        function redirectToPage() {
+            window.location.href = "./captch_page.html";
+        }
+    </script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            width: 400px; 
+            height: auto;
+        }
+        .container img {
+            display: block;
+            width: 100%; 
+            height: auto;         
+        }
+        .container button {
+            position: absolute;
+            top: 50%;
+            left: 12%;
+            transform: translate(-50%, -50%); 
+            width: 30px;
+            height: 35px;
+            background-color: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./Captcha images/Captcha not completed.png" alt="CAPTCHA">
+        <button onclick="redirectToPage()"></button>
+    </div>
+</body>
+</html>
