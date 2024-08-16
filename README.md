@@ -12,3 +12,6 @@ Download all the files of this project and open the `index.html` file with your 
 
 
 ![text question](https://github.com/Glenato/Coding-with-Lewis-hackathon/blob/Submission/Screenshots/Captcha%20text%20question.png)
+
+## Note
+Thank you very much for having organised this very special event, I have learnt a lot and have got lots of fun out of this. I am looking foward to participate to other hackathons thanks to that. 
